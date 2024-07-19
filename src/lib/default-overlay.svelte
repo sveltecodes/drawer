@@ -56,7 +56,7 @@
 
 <div bind:this={ref} class="{settings[instance.config.placement].classes} absolute h-full w-full backdrop-blur-sm">
 	{#if visible}
-		<div on:click={handleClick} on:blur={close} class="absolute {settings[instance.config.placement].classes} bg-blue-500" in:slide={{ duration: 300 }} out:slide={{ duration: 300, axis: settings[instance.config.placement].axis }}>
+		<div on:click={handleClick} on:blur={close} class="absolute {settings[instance.config.placement].classes} bg-blue-500 z-[100]" in:slide={{ duration: 300 }} out:slide={{ duration: 300, axis: settings[instance.config.placement].axis }}>
 			<svelte:component this={instance.config.component} {instance} />
 		</div>
 	{/if}

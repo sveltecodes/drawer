@@ -8,6 +8,7 @@ export class DrawerManager {
   public open(config: DrawerConfig<any>) {
     this.drawers[config.id] = new DrawerInstance(config);
     this.drawers[config.id].manager = this;
+    this.drawers[config.id].data = config.data;
     this.drawers[config.id].overlay = new DefaultOverlay({
       target: document.body,
       props: {

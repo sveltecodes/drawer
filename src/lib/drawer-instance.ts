@@ -7,6 +7,7 @@ export class DrawerInstance<T> {
   public config: DrawerConfig<T>;
   public element?: HTMLElement;
   public overlay: DefaultOverlay;
+  public data: T;
   public constructor(config: DrawerConfig<T>) {
     this.config = new DrawerConfig<T>(config);
   }
